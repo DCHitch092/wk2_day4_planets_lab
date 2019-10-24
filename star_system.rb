@@ -6,6 +6,12 @@ class StarSystem
     @planets = planets
   end
 
+  def planet_names
+    @planets.map { |planet| p planet.name }
+  end
 
+ def get_planet_by_name(planet)
+   @planets.find { |planet| planet.name == "Mars"}
+ end
 
 end
