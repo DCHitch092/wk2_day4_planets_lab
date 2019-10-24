@@ -20,6 +20,10 @@ class StarSystem
 
  def get_smallest_planet
    @planets.min_by { | planet | planet.diameter }
- end 
+ end
+
+ def get_planets_with_no_moons
+   @planets.find_all { |planet| planet.number_of_moons == 0}
+ end
 
 end
