@@ -33,6 +33,11 @@ class StarSystem
     # p result.planet_names
  end
 
+ def get_number_of_planets_closer_than(num)
+   result = @planets.find_all { |planet| planet.distance_from_sun < num }
+   result.length()
+ end
+
  #   @planets.find_all do | planet|
  #     planet.number_of_moons >= 4
  #   end
