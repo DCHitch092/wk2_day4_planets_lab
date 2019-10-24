@@ -38,6 +38,10 @@ class StarSystem
    result.length()
  end
 
+ def get_total_number_of_moons
+   @planets.reduce(0) { |list, planet| list + planet.number_of_moons}
+
+ end
  #   @planets.find_all do | planet|
  #     planet.number_of_moons >= 4
  #   end
